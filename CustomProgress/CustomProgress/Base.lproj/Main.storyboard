@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1M-ic-qd7" userLabel="CustomProgressBar">
+                                <rect key="frame" x="120" y="424" width="360" height="90"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yMd-sT-ru3" userLabel="YLProgressBar" customClass="YLProgressBar">
+                                        <rect key="frame" x="5" y="5" width="340" height="80"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.012654234110000001" green="0.63519322359999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WaterPouchBackground" translatesAutoresizingMaskIntoConstraints="NO" id="1gt-3N-xDR" userLabel="ImageForeground">
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="90"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="yMd-sT-ru3" secondAttribute="trailing" constant="15" id="Bk6-73-y0q"/>
+                                    <constraint firstItem="yMd-sT-ru3" firstAttribute="leading" secondItem="u1M-ic-qd7" secondAttribute="leading" constant="5" id="C3a-Hn-uMZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="yMd-sT-ru3" secondAttribute="bottom" constant="5" id="H9U-ty-2zs"/>
+                                    <constraint firstItem="1gt-3N-xDR" firstAttribute="top" secondItem="u1M-ic-qd7" secondAttribute="top" id="JRn-fs-9fX"/>
+                                    <constraint firstAttribute="height" constant="90" id="LKs-47-X8G"/>
+                                    <constraint firstItem="yMd-sT-ru3" firstAttribute="centerX" secondItem="u1M-ic-qd7" secondAttribute="centerX" id="OgR-Su-ylf"/>
+                                    <constraint firstItem="yMd-sT-ru3" firstAttribute="centerY" secondItem="u1M-ic-qd7" secondAttribute="centerY" id="eGY-hw-J5A"/>
+                                    <constraint firstItem="1gt-3N-xDR" firstAttribute="leading" secondItem="u1M-ic-qd7" secondAttribute="leading" id="glO-LX-67x"/>
+                                    <constraint firstAttribute="trailing" secondItem="1gt-3N-xDR" secondAttribute="trailing" id="mhC-q1-6Jy"/>
+                                    <constraint firstItem="yMd-sT-ru3" firstAttribute="top" secondItem="u1M-ic-qd7" secondAttribute="top" constant="5" id="tf4-9e-7vX"/>
+                                    <constraint firstAttribute="bottom" secondItem="1gt-3N-xDR" secondAttribute="bottom" id="yLt-eY-bDV"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PeB-TG-re5">
+                                <rect key="frame" x="150" y="275" width="50" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="dyK-6j-Whq"/>
+                                    <constraint firstAttribute="height" constant="50" id="nDk-HW-9d5"/>
+                                </constraints>
+                                <state key="normal" title="-"/>
+                                <state key="selected">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="decrementCounter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gya-xo-WYC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yy3-7Q-J0T" userLabel="Counter">
+                                <rect key="frame" x="250" y="276" width="100" height="48"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="idj-30-mku"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPh-kz-X3a">
+                                <rect key="frame" x="400" y="275" width="50" height="50"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.012654234110000001" green="0.63519322359999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" red="0.012654234110000001" green="0.63519322359999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="0.012654234110000001" green="0.63519322359999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="incrementCounter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HxN-ve-QZh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Yy3-7Q-J0T" firstAttribute="leading" secondItem="PeB-TG-re5" secondAttribute="trailing" constant="50" id="Djc-Cm-oPM"/>
+                            <constraint firstItem="u1M-ic-qd7" firstAttribute="top" secondItem="Yy3-7Q-J0T" secondAttribute="bottom" constant="100" id="F3i-cc-gZr"/>
+                            <constraint firstItem="PeB-TG-re5" firstAttribute="centerY" secondItem="Yy3-7Q-J0T" secondAttribute="centerY" id="JuK-dN-yIL"/>
+                            <constraint firstItem="Yy3-7Q-J0T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NJ5-IF-a2x"/>
+                            <constraint firstItem="tPh-kz-X3a" firstAttribute="leading" secondItem="Yy3-7Q-J0T" secondAttribute="trailing" constant="100" id="OUt-1L-nva"/>
+                            <constraint firstItem="tPh-kz-X3a" firstAttribute="centerY" secondItem="Yy3-7Q-J0T" secondAttribute="centerY" id="W7O-rn-jVg"/>
+                            <constraint firstItem="PeB-TG-re5" firstAttribute="trailing" secondItem="Yy3-7Q-J0T" secondAttribute="trailing" constant="-100" id="aHy-3P-ejv"/>
+                            <constraint firstItem="tPh-kz-X3a" firstAttribute="width" secondItem="PeB-TG-re5" secondAttribute="width" id="cUW-zp-2Yj"/>
+                            <constraint firstItem="tPh-kz-X3a" firstAttribute="leading" secondItem="Yy3-7Q-J0T" secondAttribute="trailing" constant="50" id="lgw-Hn-YPC"/>
+                            <constraint firstItem="Yy3-7Q-J0T" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ric-O7-u2j"/>
+                            <constraint firstItem="u1M-ic-qd7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sPL-zI-TtD"/>
+                            <constraint firstItem="tPh-kz-X3a" firstAttribute="height" secondItem="PeB-TG-re5" secondAttribute="height" id="tLu-AU-J9K"/>
+                            <constraint firstItem="u1M-ic-qd7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="vTf-Vv-5sF"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="aHy-3P-ejv"/>
+                                <exclude reference="OUt-1L-nva"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="Yy3-7Q-J0T" id="kvR-By-zAJ"/>
+                        <outlet property="decrementButton" destination="PeB-TG-re5" id="yck-e7-Cfv"/>
+                        <outlet property="incrementButton" destination="tPh-kz-X3a" id="rgv-Cy-chg"/>
+                        <outlet property="progressBar" destination="yMd-sT-ru3" id="ff3-M7-iXV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301" y="426"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="WaterPouchBackground" width="300" height="200"/>
+    </resources>
+</document>
